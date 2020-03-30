@@ -1,0 +1,71 @@
+<html>
+<head></head>
+
+<body>
+<pre style="word-wrap: break-word; white-space: pre-wrap;">{
+  "data": [
+    { 
+      "name": "D!P 1", 
+      "direction": "90deg", 
+      "colors": ["#f3157c", "#f53f4e"],
+      "positions": ["50%", "50%"]
+    },
+    { 
+      "name": "D!P 2", 
+      "direction": "90deg", 
+      "colors": ["#f3157c", "#f53f4e", "#f87c0f"],
+      "positions": ["33.33%", "33.33%", "33.33%"]
+    },
+    { 
+      "name": "D!P 3", 
+      "direction": "to right", 
+      "colors": ["#f53f4e", "#f87c0f"],
+      "positions": ["50%", "50%"]
+    },
+    { 
+      "name": "D!P 4", 
+      "direction": "120deg", 
+      "colors": ["#f53f4e", "#f87c0f", "#fdbe11"],
+      "positions": ["33.33%", "33.33%", "33.33%"]
+    },
+    { 
+      "name": "D!P 5", 
+      "direction": "120deg", 
+      "colors": ["#f87c0f", "#fdbe11"],
+      "positions": ["50%", "50%"]
+    },
+    { 
+      "name": "D!P 6", 
+      "direction": "to right", 
+      "colors": ["#f87c0f", "#fdbe11", "#1ac3d4"],
+      "positions": ["33.33%", "33.33%", "33.33%"]
+    },
+    { 
+      "name": "D!P 7", 
+      "direction": "135deg", 
+      "colors": ["#fdbe11", "#1ac3d4"],
+      "positions": ["50%", "50%"]
+    },
+    { 
+      "name": "D!P 8", 
+      "direction": "180deg", 
+      "colors": ["#fdbe11", "#1ac8c3", "#1ac3d4"],
+      "positions": ["33.33%", "33.33%", "33.33%"]
+    },
+    { 
+      "name": "D!P 9", 
+      "direction": "to right", 
+      "colors": ["#fdbe11", "#1ac8c3", "#1ac3d4", "#30b4ea"],
+      "positions": ["25%", "25%", "25%", "25%"]
+    },
+    { 
+      "name": "D!P 10", 
+      "direction": "to top", 
+      "colors": ["#1ac8c3", "#1ac3d4", "#30b4ea"],
+      "positions": ["33.33%", "33.33%", "33.33%"]
+    }
+  ]
+}</pre>
+
+</body>
+</html>
