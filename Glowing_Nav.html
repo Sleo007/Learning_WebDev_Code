@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<HTML>
+<head>
+  <TITLE>Glowing Nav Bar & My first HTML document</TITLE>
+  <style>
+
+body,html {
+  margin: 0;
+  background: (image.jpg);
+  font-family: 'lato', sans-serif;
+}
+
+#FlexNav {
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  flex: none;
+	flex-wrap: wrap;
+	align-items: bottom;
+	font-family: 'lato', sans-serif;
+	font-size: 1rem/1;
+	font-weight: 500px;
+	list-style: none;
+	text-align: center;
+}
+/**IN MOBILE ONLY
+	margin: 0; 
+  padding: 50px 10px 10px;
+  width: auto;
+}**/
+.FlexNav > div {
+	background-color: transparent;
+	width: 100px;
+  margin: 50px;
+  align-items: center;
+	text-align: center;
+	list-style: none;
+  line-height: 1;
+	font-size: 15px;
+}
+
+/** UNVISITED LINK **/
+a:link {
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+}
+
+/** VISITED LINK: MUST BE IN THE CODE NO MATTER WHAT!!! **/
+a:visited {
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+}
+
+/** HOVER/MOUSE OVER LINK **/
+a:hover, a:focus {
+  color: #f53f4e;
+  list-style: none;
+  text-decoration: none;
+
+/** ADD NEON GLOW TO TEXT WHEN HOVERING **/
+	text-shadow: 0 0 10px #ffffff, 0 0 20px #f53f4e, 0 0 30px #f53f4e, 0 0 40px #f53f4e, 0 0 50px #f53f4e, 0 0 60px #f53f4e, 0 0 70px #f53f4e;
+}
+
+/** SELECTED LINK **/
+a:active {
+  color: #30b4ea;
+  list-style: none;
+  text-decoration: underline;
+
+/** ADD NEON GLOW TO TEXT WHEN ACTIVE **/
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #30b4ea, 0 0 30px #30b4ea, 0 0 40px #30b4ea, 0 0 50px #30b4ea, 0 0 60px #30b4ea, 0 0 70px #30b4ea;
+  box-shadow: 0 0px 10px 2px #30b4ea;
+}
+
+li { 
+  color: #ffffff;
+	display: flex; 
+  position: relative;
+  padding: 5px 0;
+}
+
+/**----- Note: instead of "display: relative" above, we can also use "display: table" here without changing the alignment."**/
+
+a {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 5px 20px;
+  position: relative;
+}
+
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: flex;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  background: #f53f4e;
+  box-shadow: 0 0px 10px 3px #f53f4e;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+/**----- Note: the "display: block" & "position: relative" here play on the length of the underline.**/
+
+a:hover:after {
+  width: 100%; 
+  left: 0; 
+}
+
+/** THIS SHOULD BE ADJUSTED BASED ON YOUR OWN CUTOFF POINTS BASED ON JUDGMENT/BEST PRACTICES **/
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
+  </style>
+</head>
+
+<body>
+<div id="FlexNav">
+	<div><a href="#home">HOME</a></div>
+	<div><a href="#about">ABOUT</a></div>
+  <div><a href="#events">EVENTS</a></div>
+	<div><a href="#gallery">GALLERY</a></div>
+  <div><a href="#sponsors">SPONSORS</a></div>
+	<div><a href="#blog">BLOG</a></div>
+  <div><a href="#shop">SHOP</a></div>
+  <div><a href="#contact">CONNECT</a></div>	
+</div>
+</body>
