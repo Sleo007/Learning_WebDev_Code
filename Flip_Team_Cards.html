@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<!----/*background-image: url('http://[put your image URL here].png') */---->
+
+<head>
+<title>Flipping team member cards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+@font-face {
+font-family:"Neuropol";
+src: url('http://intern-dev.obrary.com/configurator-fonts/neuropob.ttf');
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ display: block;
+ margin: 0.5em 0em 0.5em;
+ color: #000;
+ font-weight: 500;
+ }
+
+h1, h3 {
+ font-family: neuropol, sans-serif;
+}
+
+h2, h4 {
+ font-family: poppins, sans-serif;
+}
+
+h5, h6 {
+ font-family: bebas, sans-serif;
+}
+
+h1 {
+ font-size: 2.75em;
+}
+
+h2 {
+ font-size: 2.5em;
+}
+
+h3 {
+ font-size: 2.25em;
+}
+
+h4 {
+ font-size: 2em;
+}
+
+h5 {
+ font-size: 1.75em;
+}
+
+h6 {
+ font-size: 1.5em;
+ color: #000;
+ opacity: 0.5;
+}
+
+p {
+font-family: lato, sans-serif;
+font-size: 20px;
+color: #fff;
+}
+
+*, *:before, *:after {
+  border-radius: 30px;
+}
+
+.row {
+  margin: 0 auto;
+  box-sizing: border-box;
+  float: center;
+  width: 100%;
+  max-width: 1200px;
+  background: transparent;
+  column-gap: 10px;
+  align: center;
+}
+
+/* Float 3 columns side by side */
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 0 10px;
+  margin-bottom: 16px;
+}
+
+/* Clear floats after the columns */
+.card:after, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/*@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}*/
+
+.flip-box {
+  background-color: transparent;
+  width: 375px;
+  height: 375px;
+  border-radius: 30px;
+  column-gap: 10px;
+  perspective: 1000px;
+  }
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-image: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+}
+
+.flip-box-back {
+  padding: 10px 20px 10px;
+  background-color: #000;
+  color: white;
+  vertical-align: center !important;
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 18px;
+  transform: rotateY(180deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Style the counter cards */
+.card {
+  padding: 5px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    background: #000;
+    color: #f53f4e;
+}
+
+.fa-linkedin {
+  background: #000;
+  color: #fff;
+}
+.fa-github {
+  background: #000;
+  color: #fff;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="row">
+
+  <div class="column">
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+        <img src="http://lorempixel.com/output/people-h-c-396-402-7.jpg" alt="John" style="width:100%">
+        </div>
+        <div class="flip-box-back">
+          <p>John is studying towards a Business degree. His career goal is to become a data analyst, &amp; strategist. He is also passionate about entrepreneurship.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3>John Smith</h3>
+      <h6>Student</h6>
+      <a href="www.linkedin.com/" class="fa fa-linkedin"></a>
+      <a href="www.github.com/" class="fa fa-github"></a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
