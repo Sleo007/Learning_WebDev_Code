@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<<!----- AUTHOR: SLEO007 ---/*background-image: url('http://[put your image URL here].png') */---->
+<head>
+  <title>Sliding Mob Nav Overlay Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<style>
+  @import "https://fonts.googleapis.com/css?family=Lato";
+
+/** DEFINE PAGE STYLE **/
+body {
+	background-color: #c3c3c3;
+	font-family: "Lato", sans-serif;
+}
+
+p {
+	background-color: transparent;
+	color: #ffffff;
+}
+/** DEFINE CSS ID="MOBNAV" STYLE **/
+#MobNav, {
+  max-width: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+/** DEFINE CSS CLASS="OVERLAY" STYLE **/
+.overlay {
+  font-size:15px;
+		height: 100%;
+ 	width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  background-color: rgba(0,0,0,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+/** DEFINE CSS CLASS="FLEXNAV" STYLE **/
+
+
+/** DEFINE CLOSING BUTTON STYLE**/
+.overlay .closebtn {
+  color: #ffffff !important;
+		list-style: none;
+		text-decoration: none !important;
+		position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+/** NOTE: CHANGING THE COLOR IN .OVERLAY .CLOSEBTN ABOVE WILL CHANGE THE COLOR OF THE "X" IN THE OVERLAY! **/
+
+/** THE BELOW FUNCTION ACTIVATES THE MENU BASED ON MIN/MAX SCREEN HEIGHT & SHOULD BE ADJUSTED ACCORDING TO YOUR JUDGEMENT. **/
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+	</style>
+</head>
+
+<body>
+
+<div id="MobNav" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	
+ <div id="MobNav" class="FlexNav">
+		<p>You can place any pre-existing flex navigation/menu here as long as it's defined as ".FlexNav in CSS."</p>
+	</div>
+</div>
+
+<span style="font-size:30px;color: #ffffff !important;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+document.getElementById("MobNav").style.width = "50%";
+}
+
+function closeNav() { document.getElementById("MobNav").style.width = "0%";
+}
+</script>
+
+<!----- NOTE: CHANGING THE COLOR IN THE <SPAN ELEMENT ABOVE WILL CHANGE THE COLOR OF THE HAMBURGER MENU! ----->
+</body>
+</html>
